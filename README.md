@@ -1,14 +1,15 @@
 # Alura Challenge | Oracle One | Java - Sistema de Reservas do Alura Hotel
 
 <p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/91544872/163815902-db1c4e2d-a6e8-4f9b-85fa-757fd0bda39c.png">
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/91544872/169541437-ee292e2f-0f8d-48e8-8b25-6b009680429a.png">
 </p>
+
 
 ### Seja bem vindo ao projeto base do Sistema de Reservas do Alura Hotel! Passos fundamentais:
 
 #### Marque esse projeto com uma estrela ⭐
 #### Siga as instruções das aulas e conteúdos 📚
-#### Visite a página do Challenge [Clicando aqui!]() 📃
+#### Visite a página do Challenge [Clicando aqui!](https://www.alura.com.br/challenges/oracle-one-java) 📃
 ---
 
 ## Como listar o meu projeto neste Challenge?
