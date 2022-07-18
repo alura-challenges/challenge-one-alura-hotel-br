@@ -263,7 +263,7 @@ Clique na opção para aceitar os Termos de Uso, e para concluir clique em <em>F
 ### Como incluir meu projeto com a "#" do desafio?
 
 1) Tenha o <strong>Fork</strong> do projeto em seu repositório no Github.
-2) Utilize o tópico **#challengeonealurahotelbr**. Vá na aba esquerda do seu projeto na seção <em>About</em> e clique na engrenagem de configuração selecione o campo **topics** e insira a etiqueta **challengeonealurahotelbr**.
+2) Utilize o tópico **#challengeonealurahotelbr2**. Vá na aba esquerda do seu projeto na seção <em>About</em> e clique na engrenagem de configuração selecione o campo **topics** e insira a etiqueta **challengeonealurahotelbr2**.
 
 
 ![gif-vitrine](https://user-images.githubusercontent.com/91544872/153601047-62aee6cb-e3cf-42b3-92c3-7130c996113f.gif)
@@ -273,8 +273,9 @@ Clique na opção para aceitar os Termos de Uso, e para concluir clique em <em>F
 4) Preencha o formulário a seguir com seus dados pessoais, juntamente com o link do seu repositório.🔹 [Link para o formulário](https://lp.alura.com.br/alura-latam-lp-entrega-de-challenge-one)
 
 <p align="center" >
-     <img width="700" heigth="700" src="https://user-images.githubusercontent.com/101413385/173254013-5f3d9f9d-49d2-4e85-b425-0b24e7e24cf2.png">
+     <img width="700" heigth="700" src="https://user-images.githubusercontent.com/91544872/179625416-62a037d0-3337-47b9-9fe0-a262f35bb9b5.png">
 </p>
+
 
 5) Vá para seu e-mail e resgate sua badge conquistada por encerrar mais um desafio no Projeto ONE! 🏆
 
