@@ -180,7 +180,7 @@ Assim, o projeto deve conter os seguintes arquivos após as importações:
 Caso o seu projeto apresente erros como os da imagem, siga os passos abaixo:
 
 <p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/101413385/173694166-189f3bce-070d-4f33-9a1d-7a9f1de95bb8.png">
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/91544872/189411561-67ccbfb3-7e75-4fdd-bfa6-e5e7a940c46e.png">
 </p>
 
 Vá até <em>Window</em> e clique em <em>Preferences</em>.
