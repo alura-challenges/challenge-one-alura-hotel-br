@@ -81,6 +81,38 @@ public class MenuUsuario extends JFrame {
 		contentPane.add(panelMenu);
 		panelMenu.setLayout(null);
 		
+		JPanel btnBuscar = new JPanel();
+		btnBuscar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnBuscar.setBackground(new Color(118, 187, 223));				
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btnBuscar.setBackground(new Color(12, 138, 199));	
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Buscar buscar = new Buscar();
+				buscar.setVisible(true);
+				dispose();
+			}
+		});
+		
+		btnBuscar.setBounds(0, 312, 257, 56);
+		btnBuscar.setBackground(new Color(12, 138, 199));
+		btnBuscar.setLayout(null);
+		btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+		panelMenu.add(btnBuscar);
+		
+		JLabel lblBusquedaDeReservas = new JLabel("Buscar");
+		lblBusquedaDeReservas.setIcon(new ImageIcon(MenuUsuario.class.getResource("/imagenes/pessoas.png")));
+		lblBusquedaDeReservas.setBounds(30, 11, 200, 34);
+		lblBusquedaDeReservas.setHorizontalAlignment(SwingConstants.LEFT);
+		lblBusquedaDeReservas.setForeground(Color.WHITE);
+		lblBusquedaDeReservas.setFont(new Font("Roboto", Font.PLAIN, 18));
+		btnBuscar.add(lblBusquedaDeReservas);
+		
 		JLabel logo = new JLabel("");
 		logo.setBounds(50, 58, 150, 150);
 		panelMenu.add(logo);
@@ -107,6 +139,7 @@ public class MenuUsuario extends JFrame {
 		btnRegistro.setBackground(new Color(12, 138, 199));
 		panelMenu.add(btnRegistro);
 		btnRegistro.setLayout(null);
+		btnRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		
 		labelRegistro = new JLabel("Registro de reservas");
 		labelRegistro.setIcon(new ImageIcon(MenuUsuario.class.getResource("/imagenes/reservado.png")));
@@ -115,36 +148,6 @@ public class MenuUsuario extends JFrame {
 		labelRegistro.setFont(new Font("Roboto", Font.PLAIN, 18));
 		labelRegistro.setHorizontalAlignment(SwingConstants.LEFT);
 		btnRegistro.add(labelRegistro);
-		
-		JPanel btnBusqueda = new JPanel();
-		btnBusqueda.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				btnBusqueda.setBackground(new Color(118, 187, 223));				
-			}
-			@Override
-			public void mouseExited(MouseEvent e) {
-				btnBusqueda.setBackground(new Color(12, 138, 199));	
-			}
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				Buscar busqueda = new Buscar();
-				busqueda.setVisible(true);
-				dispose();
-			}
-		});
-		btnBusqueda.setBounds(0, 312, 257, 56);
-		btnBusqueda.setBackground(new Color(12, 138, 199));
-		panelMenu.add(btnBusqueda);
-		btnBusqueda.setLayout(null);
-		
-		JLabel lblBusquedaDeReservas = new JLabel("Buscar");
-		lblBusquedaDeReservas.setIcon(new ImageIcon(MenuUsuario.class.getResource("/imagenes/pessoas.png")));
-		lblBusquedaDeReservas.setBounds(27, 11, 200, 34);
-		lblBusquedaDeReservas.setHorizontalAlignment(SwingConstants.LEFT);
-		lblBusquedaDeReservas.setForeground(Color.WHITE);
-		lblBusquedaDeReservas.setFont(new Font("Roboto", Font.PLAIN, 18));
-		btnBusqueda.add(lblBusquedaDeReservas);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(26, 219, 201, 2);

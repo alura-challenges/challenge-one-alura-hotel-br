@@ -53,7 +53,7 @@ public class Buscar extends JFrame {
 	 * Create the frame.
 	 */
 	public Buscar() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Buscar.class.getResource("/imagenes/lupa2.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Buscar.class.getResource("/imagenes/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
 		contentPane = new JPanel();
@@ -82,18 +82,15 @@ public class Buscar extends JFrame {
 		panel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		panel.setBounds(20, 169, 865, 328);
 		contentPane.add(panel);
-
-		
-		
-		
+				
 		tbReservas = new JTable();
 		tbReservas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tbReservas.setFont(new Font("Roboto", Font.PLAIN, 16));
 		panel.addTab("Reservas", new ImageIcon(Buscar.class.getResource("/imagenes/reservado.png")), tbReservas, null);
 		modelo = (DefaultTableModel) tbReservas.getModel();
 		modelo.addColumn("Numero de Reserva");
-		modelo.addColumn("Fecha Check In");
-		modelo.addColumn("Fecha Check Out");
+		modelo.addColumn("Data Check In");
+		modelo.addColumn("Data Check Out");
 		modelo.addColumn("Valor");
 		modelo.addColumn("Forma de Pago");
 		
@@ -103,12 +100,12 @@ public class Buscar extends JFrame {
 		tbHospedes.setFont(new Font("Roboto", Font.PLAIN, 16));
 		panel.addTab("Hóspedes", new ImageIcon(Buscar.class.getResource("/imagenes/pessoas.png")), tbHospedes, null);
 		modeloHospedes = (DefaultTableModel) tbHospedes.getModel();
-		modeloHospedes.addColumn("Numero de Huesped");
-		modeloHospedes.addColumn("Nombre");
-		modeloHospedes.addColumn("Apellido");
-		modeloHospedes.addColumn("Fecha de Nacimiento");
-		modeloHospedes.addColumn("Nacionalidad");
-		modeloHospedes.addColumn("Telefono");
+		modeloHospedes.addColumn("Numero de Hóspede");
+		modeloHospedes.addColumn("Nome");
+		modeloHospedes.addColumn("Sobrenome");
+		modeloHospedes.addColumn("Data de Nacimiento");
+		modeloHospedes.addColumn("Nacionalidade");
+		modeloHospedes.addColumn("Telefone");
 		modeloHospedes.addColumn("Numero de Reserva");
 		
 		JLabel lblNewLabel_2 = new JLabel("");
