@@ -77,8 +77,8 @@ public class MenuPrincipal extends JFrame {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblCopyR = new JLabel("Desarrollado por Fulanita de Tal © 2022");
-		lblCopyR.setBounds(315, 11, 284, 19);
+		JLabel lblCopyR = new JLabel("Desenvolvido por Fulanita de Tal © 2022");
+		lblCopyR.setBounds(315, 11, 301, 19);
 		lblCopyR.setForeground(new Color(240, 248, 255));
 		lblCopyR.setFont(new Font("Roboto", Font.PLAIN, 16));
 		panel_1.add(lblCopyR);
@@ -149,11 +149,11 @@ public class MenuPrincipal extends JFrame {
 		btnLogin.setBackground(SystemColor.window);
 		panel.add(btnLogin);
 		
-		JLabel imagenLogin = new JLabel("");
-		imagenLogin.setBounds(0, 0, 80, 70);
-		btnLogin.add(imagenLogin);
-		imagenLogin.setHorizontalAlignment(SwingConstants.CENTER);
-		imagenLogin.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagenes/login.png")));
+		JLabel imageLogin = new JLabel("");
+		imageLogin.setBounds(0, 0, 80, 70);
+		btnLogin.add(imageLogin);
+		imageLogin.setHorizontalAlignment(SwingConstants.CENTER);
+		imageLogin.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagenes/login.png")));
 		
 		JLabel lblTitulo = new JLabel("LOGIN");
 		lblTitulo.setBounds(754, 265, 83, 24);
@@ -164,7 +164,7 @@ public class MenuPrincipal extends JFrame {
 		lblTitulo.setFont(new Font("Roboto Light", Font.PLAIN, 20));
 	}
 	
-	//Código que permite mover la ventana por la pantalla según la posición de "x" y "y"
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
 	private void headerMousePressed(java.awt.event.MouseEvent evt) {
         xMouse = evt.getX();
         yMouse = evt.getY();

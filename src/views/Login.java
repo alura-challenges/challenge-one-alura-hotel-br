@@ -26,7 +26,7 @@ public class Login extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtUsuario;
-	private JPasswordField txtContrasena;
+	private JPasswordField txtSenha;
 	int xMouse, yMouse;
 	private JLabel labelExit;
 
@@ -112,18 +112,18 @@ public class Login extends JFrame {
 		txtUsuario.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-				 if (txtUsuario.getText().equals("Ingrese su nombre de usuario")) {
+				 if (txtUsuario.getText().equals("Digite seu nome de usuario")) {
 					 txtUsuario.setText("");
 					 txtUsuario.setForeground(Color.black);
 			        }
-			        if (String.valueOf(txtContrasena.getPassword()).isEmpty()) {
-			        	txtContrasena.setText("********");
-			        	txtContrasena.setForeground(Color.gray);
+			        if (String.valueOf(txtSenha.getPassword()).isEmpty()) {
+			        	txtSenha.setText("********");
+			        	txtSenha.setForeground(Color.gray);
 			        }
 			}
 		});
 		txtUsuario.setFont(new Font("Roboto", Font.PLAIN, 16));
-		txtUsuario.setText("Ingrese su nombre de usuario");
+		txtUsuario.setText("Digite seu nome de usuario");
 		txtUsuario.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		txtUsuario.setForeground(SystemColor.activeCaptionBorder);
 		txtUsuario.setBounds(65, 256, 324, 32);
@@ -135,10 +135,10 @@ public class Login extends JFrame {
 		separator.setBounds(65, 292, 324, 2);
 		panel.add(separator);
 		
-		JLabel labelTitulo = new JLabel("INICIAR SESIÓN");
+		JLabel labelTitulo = new JLabel("LOGIN");
 		labelTitulo.setForeground(SystemColor.textHighlight);
 		labelTitulo.setFont(new Font("Roboto Black", Font.PLAIN, 26));
-		labelTitulo.setBounds(65, 149, 202, 26);
+		labelTitulo.setBounds(196, 150, 89, 26);
 		panel.add(labelTitulo);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -146,26 +146,26 @@ public class Login extends JFrame {
 		separator_1.setBounds(65, 393, 324, 2);
 		panel.add(separator_1);
 		
-		txtContrasena = new JPasswordField();
-		txtContrasena.setText("********");
-		txtContrasena.addMouseListener(new MouseAdapter() {
+		txtSenha = new JPasswordField();
+		txtSenha.setText("********");
+		txtSenha.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-				if (String.valueOf(txtContrasena.getPassword()).equals("********")) {
-					txtContrasena.setText("");
-					txtContrasena.setForeground(Color.black);
+				if (String.valueOf(txtSenha.getPassword()).equals("********")) {
+					txtSenha.setText("");
+					txtSenha.setForeground(Color.black);
 		        }
 		        if (txtUsuario.getText().isEmpty()) {
-		        	txtUsuario.setText("Ingrese su nombre de usuario");
+		        	txtUsuario.setText("Digite seu nome de usuario");
 		        	txtUsuario.setForeground(Color.gray);
 		        }
 			}
 		});
-		txtContrasena.setForeground(SystemColor.activeCaptionBorder);
-		txtContrasena.setFont(new Font("Roboto", Font.PLAIN, 16));
-		txtContrasena.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-		txtContrasena.setBounds(65, 353, 324, 32);
-		panel.add(txtContrasena);
+		txtSenha.setForeground(SystemColor.activeCaptionBorder);
+		txtSenha.setFont(new Font("Roboto", Font.PLAIN, 16));
+		txtSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+		txtSenha.setBounds(65, 353, 324, 32);
+		panel.add(txtSenha);
 		
 		JLabel LabelUsuario = new JLabel("USUARIO");
 		LabelUsuario.setForeground(SystemColor.textInactiveText);
@@ -173,11 +173,11 @@ public class Login extends JFrame {
 		LabelUsuario.setBounds(65, 219, 107, 26);
 		panel.add(LabelUsuario);
 		
-		JLabel lblContrasea = new JLabel("CONTRASEÑA");
-		lblContrasea.setForeground(SystemColor.textInactiveText);
-		lblContrasea.setFont(new Font("Roboto Black", Font.PLAIN, 20));
-		lblContrasea.setBounds(65, 316, 140, 26);
-		panel.add(lblContrasea);
+		JLabel lblSenha = new JLabel("SENHA");
+		lblSenha.setForeground(SystemColor.textInactiveText);
+		lblSenha.setFont(new Font("Roboto Black", Font.PLAIN, 20));
+		lblSenha.setBounds(65, 316, 140, 26);
+		panel.add(lblSenha);
 		
 		JPanel btnLogin = new JPanel();
 		btnLogin.addMouseListener(new MouseAdapter() {
@@ -201,18 +201,18 @@ public class Login extends JFrame {
 		btnLogin.setLayout(null);
 		btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		
-		JLabel lblNewLabel = new JLabel("ENTRAR");
-		lblNewLabel.setBounds(0, 0, 122, 44);
-		btnLogin.add(lblNewLabel);
-		lblNewLabel.setForeground(SystemColor.controlLtHighlight);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Roboto", Font.PLAIN, 18));
+		JLabel lblEntrar = new JLabel("ENTRAR");
+		lblEntrar.setBounds(0, 0, 122, 44);
+		btnLogin.add(lblEntrar);
+		lblEntrar.setForeground(SystemColor.controlLtHighlight);
+		lblEntrar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEntrar.setFont(new Font("Roboto", Font.PLAIN, 18));
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/imagenes/lOGO-50PX.png")));
-		lblNewLabel_1.setBounds(65, 65, 48, 59);
-		panel.add(lblNewLabel_1);
+		JLabel logo = new JLabel("");
+		logo.setHorizontalAlignment(SwingConstants.CENTER);
+		logo.setIcon(new ImageIcon(Login.class.getResource("/imagenes/lOGO-50PX.png")));
+		logo.setBounds(65, 65, 48, 59);
+		panel.add(logo);
 		
 		JPanel header = new JPanel();
 		header.addMouseMotionListener(new MouseMotionAdapter() {
@@ -238,7 +238,7 @@ public class Login extends JFrame {
 		 String Usuario= "admin";
 	     String Contraseña="admin";
 
-	        String contrase=new String (txtContrasena.getPassword());
+	        String contrase=new String (txtSenha.getPassword());
 
 	        if(txtUsuario.getText().equals(Usuario) && contrase.equals(Contraseña)){
 	            MenuUsuario menu = new MenuUsuario();
@@ -248,10 +248,12 @@ public class Login extends JFrame {
 	            JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
 	        }
 	} 
+	
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
 	        yMouse = evt.getY();
-	    }//GEN-LAST:event_headerMousePressed
+	    }
 
 	    private void headerMouseDragged(java.awt.event.MouseEvent evt) {
 	        int x = evt.getXOnScreen();
