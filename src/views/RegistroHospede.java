@@ -197,7 +197,7 @@ public class RegistroHospede extends JFrame {
 		lblSobrenome.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		contentPane.add(lblSobrenome);
 		
-		JLabel lblDataN = new JLabel("DATA DE NASCIMIENTO");
+		JLabel lblDataN = new JLabel("DATA DE NASCIMENTO");
 		lblDataN.setBounds(560, 256, 255, 14);
 		lblDataN.setForeground(SystemColor.textInactiveText);
 		lblDataN.setFont(new Font("Roboto Black", Font.PLAIN, 18));

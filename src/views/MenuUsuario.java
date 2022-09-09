@@ -204,7 +204,7 @@ public class MenuUsuario extends JFrame {
 	    labelFecha.setForeground(Color.WHITE);
 	    labelFecha.setFont(new Font("Roboto", Font.PLAIN, 33));
 	    Date fechaActual = new Date(); //data atual
-	    String fecha = new SimpleDateFormat("dd/MM/yyyy").format(fechaActual); //formatea a data numa string
+	    String fecha = new SimpleDateFormat("dd/MM/yyyy").format(fechaActual); //formata a data numa string
 	    labelFecha.setText("Hoje é " + fecha); //estabelece a data na label
 	    
 	    JLabel lbltitulo = new JLabel("Bem-vindo");
@@ -241,7 +241,7 @@ public class MenuUsuario extends JFrame {
 	    contentPane.add(labelDescricao_4);
 	}
 	
-	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"
 	private void headerMousePressed(java.awt.event.MouseEvent evt) {
         xMouse = evt.getX();
         yMouse = evt.getY();

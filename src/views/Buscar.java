@@ -103,7 +103,7 @@ public class Buscar extends JFrame {
 		modeloHospedes.addColumn("Numero de Hóspede");
 		modeloHospedes.addColumn("Nome");
 		modeloHospedes.addColumn("Sobrenome");
-		modeloHospedes.addColumn("Data de Nacimiento");
+		modeloHospedes.addColumn("Data de Nascimento");
 		modeloHospedes.addColumn("Nacionalidade");
 		modeloHospedes.addColumn("Telefone");
 		modeloHospedes.addColumn("Numero de Reserva");
@@ -171,12 +171,12 @@ public class Buscar extends JFrame {
 				dispose();
 			}
 			@Override
-			public void mouseEntered(MouseEvent e) { //Al usuario pasar el mouse por el botón este cambiará de color
+			public void mouseEntered(MouseEvent e) { // Quando o usuário passa o mouse sobre o botão, ele muda de cor
 				btnexit.setBackground(Color.red);
 				labelExit.setForeground(Color.white);
 			}			
 			@Override
-			public void mouseExited(MouseEvent e) { //Al usuario quitar el mouse por el botón este volverá al estado original
+			public void mouseExited(MouseEvent e) { //Quando o usuário remove o mouse do botão, ele retornará ao estado original
 				 btnexit.setBackground(Color.white);
 			     labelExit.setForeground(Color.black);
 			}
@@ -249,7 +249,7 @@ public class Buscar extends JFrame {
 		setResizable(false);
 	}
 	
-	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
 	        yMouse = evt.getY();

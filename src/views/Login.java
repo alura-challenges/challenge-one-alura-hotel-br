@@ -236,20 +236,20 @@ public class Login extends JFrame {
 	
 	private void Login() {
 		 String Usuario= "admin";
-	     String Contraseña="admin";
+	     String Senha="admin";
 
-	        String contrase=new String (txtSenha.getPassword());
+	        String senhaa=new String (txtSenha.getPassword());
 
-	        if(txtUsuario.getText().equals(Usuario) && contrase.equals(Contraseña)){
+	        if(txtUsuario.getText().equals(Usuario) && senhaa.equals(Senha)){
 	            MenuUsuario menu = new MenuUsuario();
 	            menu.setVisible(true);
 	            dispose();	 
 	        }else {
-	            JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
+	            JOptionPane.showMessageDialog(this, "Usuario ou Senha não válidos");
 	        }
 	} 
 	
-	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
 	        yMouse = evt.getY();

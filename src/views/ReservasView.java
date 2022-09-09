@@ -291,33 +291,33 @@ public class ReservasView extends JFrame {
 		separator_1.setBackground(SystemColor.textHighlight);
 		panel.add(separator_1);
 		
-		JPanel btnsiguiente = new JPanel();
-		btnsiguiente.addMouseListener(new MouseAdapter() {
+		JPanel btnProximo = new JPanel();
+		btnProximo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {		
 					RegistroHospede registro = new RegistroHospede();
 					registro.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Debe preencher todos os campos.");
+					JOptionPane.showMessageDialog(null, "Deve preencher todos os campos.");
 				}
 			}						
 		});
-		btnsiguiente.setLayout(null);
-		btnsiguiente.setBackground(SystemColor.textHighlight);
-		btnsiguiente.setBounds(238, 493, 122, 35);
-		panel.add(btnsiguiente);
-		btnsiguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+		btnProximo.setLayout(null);
+		btnProximo.setBackground(SystemColor.textHighlight);
+		btnProximo.setBounds(238, 493, 122, 35);
+		panel.add(btnProximo);
+		btnProximo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		
 		JLabel lblSeguinte = new JLabel("PRÓXIMO");
 		lblSeguinte.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSeguinte.setForeground(Color.WHITE);
 		lblSeguinte.setFont(new Font("Roboto", Font.PLAIN, 18));
 		lblSeguinte.setBounds(0, 0, 122, 35);
-		btnsiguiente.add(lblSeguinte);
+		btnProximo.add(lblSeguinte);
 	}
 
-	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"	
+	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
 	        yMouse = evt.getY();
