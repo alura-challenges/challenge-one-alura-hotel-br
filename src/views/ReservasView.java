@@ -33,7 +33,7 @@ public class ReservasView extends JFrame {
 	public static JTextField txtValor;
 	public static JDateChooser txtDataE;
 	public static JDateChooser txtDataS;
-	public static JComboBox<Format> txtFormaPagamento;
+	public static JComboBox<String> txtFormaPagamento;
 	int xMouse, yMouse;
 	private JLabel labelExit;
 	private JLabel lblValorSimbolo; 

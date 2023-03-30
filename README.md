@@ -10,7 +10,7 @@
 
 #### 🔹 Marque esse projeto com uma ⭐
 #### 🔹 Siga as orientações do que temos neste repositório 📚
-#### 🔹 Visite a página do desafio clicando aqui! [Link do Challenge](https://www.alura.com.br/challenges/oracle-one-java) 📃 
+#### 🔹 Visite a página do desafio clicando aqui! [Link do Challenge](https://www.alura.com.br/challenges/oracle-one-back-end/hotelalura) 📃 
 </br>
 
 ## 🖥️ Tecnologias Utilizadas:
@@ -228,7 +228,7 @@ Para este desafio propomos duas tabelas: <strong>Reservas</strong> e <strong>Hó
 
 <p align="center" >
      <img width="500" heigth="500" src="https://user-images.githubusercontent.com/101413385/169434993-1d494d38-d122-457d-b973-52b42270114b.png">
-     <img width="500" heigth="500" src="https://user-images.githubusercontent.com/91544872/173657744-d6a5887a-8f37-4baa-afa0-e3e8ba5e1373.png">
+    
 </p>
 
 ## 🗔 Plugin WindowBuilder
@@ -263,17 +263,17 @@ Clique na opção para aceitar os Termos de Uso, e para concluir clique em <em>F
 ### Como incluir meu projeto com a "#" do desafio?
 
 1) Tenha o <strong>Fork</strong> do projeto em seu repositório no Github.
-2) Utilize o tópico **#challengeonealurahotelbr2**. Vá na aba esquerda do seu projeto na seção <em>About</em> e clique na engrenagem de configuração selecione o campo **topics** e insira a etiqueta **challengeonealurahotelbr3**.
+2) Utilize o tópico **#challengeonealurahotelbr4**. Vá na aba esquerda do seu projeto na seção <em>About</em> e clique na engrenagem de configuração selecione o campo **topics** e insira a etiqueta **challengeonealurahotelbr4**.
 
 
 ![gif-vitrine](https://user-images.githubusercontent.com/91544872/153601047-62aee6cb-e3cf-42b3-92c3-7130c996113f.gif)
 
 ### Como faço a entrega final do meu Projeto?
 
-4) Preencha o formulário a seguir com seus dados pessoais, juntamente com o link do seu repositório.🔹 [Link para o formulário](https://lp.alura.com.br/alura-latam-lp-entrega-de-challenge-one)
+4) Preencha o formulário a seguir com seus dados pessoais, juntamente com o link do seu repositório.🔹 [Link para o formulário](https://lp.alura.com.br/alura-latam-entrega-challenge-one-portugues-back-end)
 
 <p align="center" >
-     <img width="700" heigth="700" src="https://user-images.githubusercontent.com/91544872/179625254-3f72f4df-b169-4be9-a11d-0d874e71c992.png">
+     <img width="700" heigth="700" src="https://user-images.githubusercontent.com/91544872/218554361-c5fa616a-3232-4a21-998c-3b03fb7a0c8c.png">
 </p>
 
 
