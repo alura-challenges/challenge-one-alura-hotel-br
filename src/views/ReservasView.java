@@ -11,6 +11,10 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
+
+import controller.ReservasController;
+import modelo.Reserva;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -38,6 +42,8 @@ public class ReservasView extends JFrame {
 	private JLabel labelExit;
 	private JLabel lblValorSimbolo; 
 	private JLabel labelAtras;
+	
+	private ReservasController reservasController;
 
 	/**
 	 * Launch the application.
@@ -60,6 +66,7 @@ public class ReservasView extends JFrame {
 	 */
 	public ReservasView() {
 		super("Reserva");
+		reservasController = new ReservasController();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
@@ -315,6 +322,18 @@ public class ReservasView extends JFrame {
 		lblSeguinte.setFont(new Font("Roboto", Font.PLAIN, 18));
 		lblSeguinte.setBounds(0, 0, 122, 35);
 		btnProximo.add(lblSeguinte);
+	}
+	
+	private void salvarReserva() {
+		String dataEntrada = ((JTextField)txtDataE.getDateEditor().getUiComponent()).getText();
+		String dataSaida = ((JTextField)txtDataS.getDateEditor().getUiComponent()).getText();
+		Reserva novaReserva = new Reserva(java.sql.Date.valueOf(dataEntrada), java.sql.Date.valueOf(dataSaida),txtValor.getText(), 
+				txtFormaPagamento.getSelectedItem().toString());
+		
+		JOptionPane.showMessageDialog(contentPane, "Resistro salvo, N�mero de Reserva "+novaReserva.getId().toString());
+		
+		RegistroHospede registroHospede =  new RegistroHospede();
+		reservasController.salvar(novaReserva);
 	}
 
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
