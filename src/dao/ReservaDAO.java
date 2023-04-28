@@ -65,14 +65,15 @@ public void alterar(Reserva reserva) {
 		throw new RuntimeException(e);
 }
 }
-private void buscar(List<Reserva>reservas, PreparedStatement preparedStatement) {
-	try( ResultSet result = preparedStatement.getResultSet()){
-		while(result.next()) {
-			Reserva reserva = new Reserva(result.getInt(1), result.getString(2) , result.getDouble(4), result.getString(5));
+private void buscar(List<Reserva> reservas, PreparedStatement preparedStatement) {
+	try (ResultSet result = preparedStatement.getResultSet()) {
+		while (result.next()) {
+			Reserva reserva = new Reserva(result.getInt(1), result.getString(2), result.getString(3),
+					result.getDouble(4), result.getString(5));
 			reservas.add(reserva);
 		}
-	}catch(SQLException e) {
+	} catch (SQLException e) {
 		throw new RuntimeException(e);
-}
+	}
 }
 }
