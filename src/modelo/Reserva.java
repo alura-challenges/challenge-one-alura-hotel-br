@@ -1,6 +1,5 @@
 package modelo;
 
-import java.sql.Date;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -9,17 +8,17 @@ import java.util.Locale;
 public class Reserva {
 
 	private Integer id;
-	
+
 	private String dataEntrada;
-	
+
 	private String dataSaida;
-	
+
 	private Double valor;
-	
+
 	private String formaDePagamento;
-	
+
 	public Reserva() {
-		
+
 	}
 
 	public Reserva(String dataEntrada, String dataSaida, Double valor, String formaDePagamento) {
@@ -33,9 +32,7 @@ public class Reserva {
 		this(dataEntrada, dataSaida, valor, formaDePagamento);
 		this.id = id;
 	}
-	
 
-	
 	public Integer getId() {
 		return this.id;
 	}
