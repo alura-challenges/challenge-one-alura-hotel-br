@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.text.SimpleDateFormat;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -26,6 +27,9 @@ import javax.swing.border.LineBorder;
 
 import com.toedter.calendar.JDateChooser;
 
+import controler.ReservaControler;
+import modelo.Reserva;
+
 
 @SuppressWarnings("serial")
 public class ReservasView extends JFrame {
@@ -39,6 +43,7 @@ public class ReservasView extends JFrame {
 	private JLabel labelExit;
 	private JLabel lblValorSimbolo; 
 	private JLabel labelAtras;
+	private ReservaControler reservaControler;
 
 	/**
 	 * Launch the application.
@@ -61,6 +66,8 @@ public class ReservasView extends JFrame {
 	 */
 	public ReservasView() {
 		super("Reserva");
+
+		this.reservaControler = new ReservaControler();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
@@ -296,13 +303,8 @@ public class ReservasView extends JFrame {
 		btnProximo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {		
-					RegistroHospede registro = new RegistroHospede();
-					registro.setVisible(true);
-				} else {
-					JOptionPane.showMessageDialog(null, "Deve preencher todos os campos.");
-				}
-			}						
+				salvar();
+			}
 		});
 		btnProximo.setLayout(null);
 		btnProximo.setBackground(SystemColor.textHighlight);
@@ -316,6 +318,36 @@ public class ReservasView extends JFrame {
 		lblSeguinte.setFont(new Font("Roboto", Font.PLAIN, 18));
 		lblSeguinte.setBounds(0, 0, 122, 35);
 		btnProximo.add(lblSeguinte);
+	}
+	
+	private void salvar() {
+		if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			String dataE = sdf.format(txtDataE.getDate());
+			String dataS = sdf.format(txtDataS.getDate());
+			Reserva reserva = new Reserva(dataE, dataS, Double.parseDouble(txtValor.getText()),
+					(String) txtFormaPagamento.getSelectedItem());
+			reservaControler.reserva(reserva);
+			JOptionPane.showMessageDialog(null, "Cadastro bem-sucedido.");
+			RegistroHospede registro = new RegistroHospede(reserva);
+			registro.setVisible(true);
+			dispose();
+		} else {
+			JOptionPane.showMessageDialog(null, "Deve preencher todos os campos.");
+		}
+	}
+
+	private void valorDiaria() {
+		if (txtDataE.getDate() != null && txtDataS.getDate() != null) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			String dataE = sdf.format(txtDataE.getDate());
+			String dataS = sdf.format(txtDataS.getDate());
+			if (txtDataE.getDate().compareTo(txtDataS.getDate()) > 0) {
+				JOptionPane.showMessageDialog(null, "A data de Check Out não pode ser anterior ao Check In.");
+			} else {
+				txtValor.setText(String.valueOf(Reserva.valor(dataE, dataS)));
+			}
+		}
 	}
 
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
