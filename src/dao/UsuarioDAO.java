@@ -18,7 +18,7 @@ public class UsuarioDAO {
 
 	public boolean login() {
 		try {
-			String sql = "SELECT * FROM USUARIO WHERE USUARIO = ? AND PASSWORD = ?";
+			String sql = "SELECT * FROM usuarios WHERE nome_usuario = ? AND password = ?";
 			try (PreparedStatement pstm = this.connection.prepareStatement(sql)) {
 				pstm.setString(1, this.usuario);
 				pstm.setString(2, this.password);

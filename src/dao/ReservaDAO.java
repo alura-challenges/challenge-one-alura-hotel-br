@@ -20,7 +20,7 @@ public class ReservaDAO {
 	public List<Reserva> listar() {
 		try {
 			List<Reserva> reservas = new ArrayList<>();
-			String sql = "SELECT * FROM RESERVAS";
+			String sql = "SELECT * FROM reservas";
 			try (PreparedStatement pstm = this.connection.prepareStatement(sql)) {
 				pstm.execute();
 				resultEmReserva(reservas, pstm);
@@ -33,7 +33,7 @@ public class ReservaDAO {
 
 	public List<Reserva> pesquisar(String pesquisa) {
 		try {
-			String sql = "SELECT * FROM RESERVAS WHERE ID = ?";
+			String sql = "SELECT * FROM reservas WHERE ID = ?";
 			List<Reserva> reservas = new ArrayList<>();
 			try (PreparedStatement pstm = this.connection.prepareStatement(sql)) {
 				pstm.setString(1, pesquisa);
@@ -46,14 +46,14 @@ public class ReservaDAO {
 		}
 	}
 	public void reserva(Reserva reserva) {
-		String sql = "INSERT INTO RESERVAS (DATA_ENTRADA, DATA_SAIDA, VALOR, FORMA_PAGAMENTO) VALUES (?, ?, ?, ?);";
+		String sql = "INSERT INTO reservas (data_entrada, data_saida, valor, forma_pago) VALUES (?, ?, ?, ?);";
 		try (PreparedStatement pstm = this.connection.prepareStatement(sql,
 				Statement.RETURN_GENERATED_KEYS)) {
 			pstm.setString(1, reserva.getDataEntrada());
 			pstm.setString(2, reserva.getDataSaida());
 			pstm.setDouble(3, reserva.getValor());
 			pstm.setString(4, reserva.getFormaDePagamento());
-			pstm.executeUpdate();
+			pstm.execute();
 
 			try (ResultSet resultSet = pstm.getGeneratedKeys()) {
 				while (resultSet.next()) {
@@ -79,7 +79,7 @@ public class ReservaDAO {
 
 	public void alterar(Reserva reserva) {
 		try {
-			String sql = "UPDATE reservas SET data_entrada = ?, data_saida = ?, valor = ?, formaPagamento = ? WHERE id = ? ";
+			String sql = "UPDATE reservas SET data_entrada = ?, data_saida = ?, valor = ?, forma_pago = ? WHERE id = ? ";
 			try (PreparedStatement pstm = this.connection.prepareStatement(sql)) {
 				pstm.setString(1, reserva.getDataEntrada());
 				pstm.setString(2, reserva.getDataSaida());

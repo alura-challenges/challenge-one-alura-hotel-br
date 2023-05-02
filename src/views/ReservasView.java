@@ -150,6 +150,7 @@ public class ReservasView extends JFrame {
 		txtDataS.addPropertyChangeListener(new PropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent evt) {
 				//Ativa o evento, após o usuário selecionar as datas, o valor da reserva deve ser calculado
+				valorDiaria();
 			}
 		});
 		txtDataS.setDateFormatString("yyyy-MM-dd");
