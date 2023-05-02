@@ -25,7 +25,7 @@ public class HospedeDAO {
 			pstm.setString(3, hospede.getDataNascimento());
 			pstm.setString(4, hospede.getNacionalidade());
 			pstm.setString(5, hospede.getTelefone());
-			pstm.setInt(1, hospede.getIdReserva());
+			pstm.setInt(6, hospede.getIdReserva());
 
 			pstm.executeUpdate();
 			try (ResultSet result = pstm.getGeneratedKeys()) {
